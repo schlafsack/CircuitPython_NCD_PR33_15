@@ -51,3 +51,15 @@ Implementation Notes
 
 __version__ = "0.0.0-auto.0"
 __repo__ = "https://github.com/schlafsack/CircuitPython_NCD_PR33_15.git"
+
+class Receiver:
+
+    def __init__(self, i2c, device_address):
+        self.i2c = i2c
+        self.device_address = device_address
+
+    def __enter__(self):
+        return self
+
+    def __exit__(self, *exc):
+        return False

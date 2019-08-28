@@ -5,6 +5,7 @@ https://packaging.python.org/en/latest/distributing.html
 https://github.com/pypa/sampleproject
 """
 
+# Always prefer setuptools over distutils
 from setuptools import setup, find_packages
 # To use a consistent encoding
 from codecs import open
@@ -37,7 +38,6 @@ setup(
         'Adafruit-Blinka',
         'adafruit-circuitpython-busdevice',
         'adafruit-circuitpython-register',
-        'no'
     ],
 
     # Choose your license
@@ -56,12 +56,9 @@ setup(
     ],
 
     # What does your project relate to?
-    keywords='adafruit blinka circuitpython micropython ncd_pr33_15 NCD ncd.io PR33-15 '
-             'MCP3428 4-20ma',
+    keywords='adafruit circuitpython micropython device ncd_pr33_15 NCD ncd.io PR33-15 MCP3428 4-20ma',
 
     # You can just specify the packages manually here if your project is
     # simple. Or you can use find_packages().
-    # TODO: IF LIBRARY FILES ARE A PACKAGE FOLDER,
-    #       CHANGE `py_modules=['...']` TO `packages=['...']`
-    py_modules=['circuitpython_ncd_pr33_15'],
+    packages=['ncd_pr33_15'],
 )

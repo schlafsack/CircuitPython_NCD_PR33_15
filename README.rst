@@ -2,7 +2,7 @@ Introduction
 ============
 
 .. image:: https://readthedocs.org/projects/circuitpython-ncd_pr33_15/badge/?version=latest
-    :target: https://circuitpython.readthedocs.io/projects/ncd_pr33_15/en/latest/
+    :target: https://circuitpython_ncd_pr33_15.readthedocs.io/
     :alt: Documentation Status
 
 .. image:: https://img.shields.io/discord/327254708534116352.svg
@@ -13,7 +13,7 @@ Introduction
     :target: https://travis-ci.com/schlafsack/CircuitPython_NCD_PR33_15
     :alt: Build Status
 
-Driver for the ncd.io PR33-15 4-20ma receiver
+A CircuitPython driver for the ncd.io PR33-15 4-20ma receiver
 
 
 Dependencies
@@ -22,41 +22,10 @@ This driver depends on:
 
 * `Adafruit CircuitPython <https://github.com/adafruit/circuitpython>`_
 * `Bus Device <https://github.com/adafruit/Adafruit_CircuitPython_BusDevice>`_
-* `Register <https://github.com/adafruit/Adafruit_CircuitPython_Register>`_
 
 Please ensure all dependencies are available on the CircuitPython filesystem.
 This is easily achieved by downloading
 `the Adafruit library and driver bundle <https://github.com/adafruit/Adafruit_CircuitPython_Bundle>`_.
-
-Installing from PyPI
-=====================
-.. note:: This library is not available on PyPI yet. Install documentation is included
-   as a standard element. Stay tuned for PyPI availability!
-
-.. todo:: Remove the above note if PyPI version is/will be available at time of release.
-   If the library is not planned for PyPI, remove the entire 'Installing from PyPI' section.
-
-On supported GNU/Linux systems like the Raspberry Pi, you can install the driver locally `from
-PyPI <https://pypi.org/project/circuitpython-ncd_pr33_15/>`_. To install for current user:
-
-.. code-block:: shell
-
-    pip3 install circuitpython-ncd-pr33-15
-
-To install system-wide (this may be required in some cases):
-
-.. code-block:: shell
-
-    sudo pip3 install circuitpython-ncd-pr33-15
-
-To install in a virtual environment in your current project:
-
-.. code-block:: shell
-
-    mkdir project-name && cd project-name
-    python3 -m venv .env
-    source .env/bin/activate
-    pip3 install circuitpython-ncd-pr33-15
 
 Usage Example
 =============

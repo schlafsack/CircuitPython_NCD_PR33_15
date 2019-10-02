@@ -32,13 +32,14 @@ Implementation Notes
 
 **Hardware:**
 
-   `NCD.io PR33-15 <https:#store.ncd.io/product/4-channel-i2c-4-20ma-current-receiver-with-i2c-interface/>`_
+   `NCD.io PR33-15 <https://store.ncd.io/product/4-channel-i2c-4-20ma-current-receiver-with-i2c-interface/>`_
 
 **Software and Dependencies:**
 
-* Adafruit CircuitPython firmware for the supported boards: https:#github.com/adafruit/circuitpython/releases
-* Adafruit's Bus Device library: https:#github.com/adafruit/Adafruit_CircuitPython_BusDevice
-* Adafruit's Register library: https:#github.com/adafruit/Adafruit_CircuitPython_Register
+* Adafruit CircuitPython firmware for the supported boards:
+  https://github.com/adafruit/circuitpython/releases
+* Adafruit's Bus Device library:
+  https://github.com/adafruit/Adafruit_CircuitPython_BusDevice
 """
 
 import sys
@@ -55,7 +56,7 @@ except ValueError:
     pass
 
 __version__ = "0.0.0-auto.0"
-__repo__ = "https:#github.com/schlafsack/CircuitPython_NCD_PR33_15.git"
+__repo__ = "https://github.com/schlafsack/CircuitPython_NCD_PR33_15.git"
 
 DEVICE_ADDRESS = 0x68  # default address of PR33-15 board
 
@@ -91,6 +92,7 @@ GAIN_DIVIDER = {
     GAIN_4X: 4,
     GAIN_8X: 8,
 }
+
 
 class ConfigBits:
 
@@ -129,12 +131,12 @@ class Receiver:
     def __exit__(self, *exc):
         return False
 
-    def readRaw(self):
+    def raw_value(self):
         sample_rate = self.sample_rate
         sample_bits = SAMPLE_BITS[sample_rate]
         self.ready = 1
         while self.ready:
-            pass
+            continue
         with self.i2c_device as i2c:
             i2c.readinto(self.buffer)
         raw_data = ((self.buffer[0] << 8) + self.buffer[1]) & (65535 >> (16 - sample_bits))

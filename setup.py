@@ -6,7 +6,7 @@ https://github.com/pypa/sampleproject
 """
 
 # Always prefer setuptools over distutils
-from setuptools import setup, find_packages
+from setuptools import setup
 # To use a consistent encoding
 from codecs import open
 from os import path
@@ -23,7 +23,7 @@ setup(
     use_scm_version=True,
     setup_requires=['setuptools_scm'],
 
-    description='Driver for the ncd.io PR33-15 4-20ma receiver',
+    description='A CircuitPython driver for the ncd.io PR33-15 4-20ma receiver',
     long_description=long_description,
     long_description_content_type='text/x-rst',
 

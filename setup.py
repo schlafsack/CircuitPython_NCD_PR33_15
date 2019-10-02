@@ -32,7 +32,7 @@ setup(
 
     # Author details
     author='Tom Greasley',
-    author_email='tom@greasley.com.com',
+    author_email='',
 
     install_requires=[
         'adafruit-circuitpython-busdevice',
